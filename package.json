@@ -1,0 +1,42 @@
+{
+  "name": "indie-dev-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Original and curated agent skills, installed directly from GitHub",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxnb/indie-dev-skills.git"
+  },
+  "bin": {
+    "indie-dev-skills": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "skills",
+    "third-party.yaml",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "validate": "node --import tsx scripts/validate.ts",
+    "check": "npm run typecheck && npm test && npm run validate && npm run build:cli && npm run smoke",
+    "install-skills": "node dist/cli.js install",
+    "smoke": "node scripts/smoke.mjs",
+    "build:cli": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "yaml": "2.9.1"
+  }
+}

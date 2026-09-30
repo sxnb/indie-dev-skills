@@ -1,0 +1,13 @@
+version: 1
+skills:
+  - name: logo-design
+    description: Design and evaluate logos with SVG tools and a visual reference library.
+    repository: https://github.com/kaankiziltug/logo-design-skill.git
+    path: skills/logo-design
+    commit: 0ecf52e9a4b3ac92b714f7cc6e3148ab8c774134
+    author: kaankiziltug
+    license: MIT (instructions and code); reference logos excluded
+    notices:
+      - LICENSE
+      - TRADEMARKS.md
+    notes: Reference logos remain subject to their owners' rights; see TRADEMARKS.md. Using the skill's tools requires Python 3.
